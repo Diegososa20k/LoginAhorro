@@ -13,7 +13,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     {{-- Aca es el titulo de la pestana --}}
-    <title>{{ config('Tiendita', 'Tiendita') }}</title>
+    <title>{{ config('Control Ahorro Gasto', 'Control Ahorro Gasto') }}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -75,9 +75,9 @@
 
 
 
-                                    <a class="dropdown-item" href="{{ route('home')}}">
+                                    {{-- <a class="dropdown-item" href="{{ route('home')}}">
                                         Inicio
-                                    </a>
+                                    </a> --}}
 
                                     <a class="dropdown-item" href="{{ route('editar-usuario') }}">
                                         Editar usuario
