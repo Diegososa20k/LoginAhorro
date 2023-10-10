@@ -44,50 +44,48 @@
 
       <button @click="updateUserData">Guardar Cambios</button>
     </div> -->
-  </template>
+</template>
 
-  <script>
-  export default {
+<script>
+export default {
     data() {
-      return {
+        return {
         Acampos: []
-      };
+        };
     },
     name: 'EditarUsuario',
 
     mounted() {
-      this.getDialog();
+        this.getDialog();
     },
 
     methods: {
-      getDialog() {
-        axios
-          .get('/user-data')
-          .then(response => {
+        getDialog() {
+            axios
+            .get('/user-data')
+            .then(response => {
             this.Acampos = response.data.user;
-          })
-          .catch(error => {
+            })
+            .catch(error => {
             console.error('Error al obtener datos de usuario', error);
-          });
-      },
+            });
+        },
 
-      updateUserData() {
-      axios
-        .put('/user-data', this.Acampos)
-        .then(response => {
-          console.log('Usuario actualizado con éxito:', response.data.message);
-        })
-        .catch(error => {
-          console.error('Error al actualizar usuario', error);
-        });
+        updateUserData() {
+            axios
+            .put('/user-data', this.Acampos)
+            .then(response => {
+                console.log('Usuario actualizado con éxito:', response.data.message);
+            })
+            .catch(error => {
+                console.error('Error al actualizar usuario', error);
+            });
 
-        console.log('Guardar cambios:', this.Acampos);
+            console.log('Guardar cambios:', this.Acampos);
+        }
     }
-
-
-    }
-  };
-  </script>
+};
+</script>
 
 
 <!--
