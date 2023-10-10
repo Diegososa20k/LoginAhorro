@@ -67,6 +67,11 @@
 
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('editar-usuario') }}">
+                                        Editar usuario
+                                    </a>
+
+
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
@@ -78,11 +83,6 @@
                                     {{-- <a class="dropdown-item" href="{{ route('home')}}">
                                         Inicio
                                     </a> --}}
-
-                                    <a class="dropdown-item" href="{{ route('editar-usuario') }}">
-                                        Editar usuario
-                                    </a>
-
                                     {{-- Agregar opcion de inicio y mandar a pantalla inicio --}}
 
 
@@ -108,7 +108,7 @@
                 </div>
                 <div class="offcanvas-body">
                     <ul class="list-group">
-                        <li class="list-group-item"><a href="{{ route('grafica') }}">Catalogo de productos</li>
+                        <li class="list-group-item"><a href="{{ route('grafica') }}">Graficas de ahorro y gasto</li>
                         <li class="list-group-item"><a href="{{ route('inversion') }}">Inversiones</li>
                     </ul>
                 </div>
