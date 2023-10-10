@@ -28,10 +28,8 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
 
             <div class="container">
-                <button class="btn margen btn-menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
-                    <i class="mdi mdi-menu icon navbar-brand"></i>
-                </button>
-                <a class="navbar-brand" href="{{ route('home') }}">
+
+                <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('', 'Control de Ahorros y Gastos') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -79,10 +77,6 @@
                                         Inicio
                                     </a>
 
-                                    <a class="dropdown-item" href="{{ route('editar-usuario') }}">
-                                        Editar usuario
-                                    </a>
-
                                     {{-- Agregar opcion de inicio y mandar a pantalla inicio --}}
 
 
@@ -108,8 +102,8 @@
                 </div>
                 <div class="offcanvas-body">
                     <ul class="list-group">
-                        <li class="list-group-item"><a href="{{ route('grafica') }}">Catalogo de productos</li>
-                        <li class="list-group-item"><a href="{{ route('inversion') }}">Inversiones</li>
+                        <li class="list-group-item"><a href="#">Graficas de Ahora-Gasto</li>
+                        <li class="list-group-item"><a href="#">Inversiones</li>
                     </ul>
                 </div>
         </main>
